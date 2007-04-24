@@ -1,4 +1,4 @@
-%define version   1.8.74
+%define version   1.8.75
 %define release   %mkrel 1
 
 %define libname_orig lib%{name}
