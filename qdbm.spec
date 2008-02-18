@@ -5,7 +5,7 @@
 %define libname %mklibname %{name} 14
 
 Name:		qdbm
-Summary:	QDBM is a Quick Database Manager
+Summary:	Quick Database Manager
 Version:	%{version}
 Release:	%{release}
 Group:		Databases
