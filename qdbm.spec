@@ -1,8 +1,9 @@
 %define version   1.8.77
 %define release   %mkrel 1
 
-%define libname_orig lib%{name}
-%define libname %mklibname %{name} 14
+%define major 14
+%define libname %mklibname %{name} %{major}
+%define develname %mklibname -d %{name}
 
 Name:		qdbm
 Summary:	Quick Database Manager
@@ -30,19 +31,20 @@ should be installed with a source package.
 %package -n %{libname}
 Summary:	QDBM library
 Group:		Databases
-Provides:	%{libname_orig} = %{version}-%{release}
 
 %description -n %{libname}
 QDBM library.
 
-%package -n %{libname}-devel
+%package -n %{develname}
 Summary:	Headers of %{name} for development
 Group:		Development/C
-Requires:	%{libname} = %{version}
+Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
-Provides:	%{libname_orig}-devel = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
+Obsoletes:	%mklibname -d qdbm 14
+Conflicts:	%libname < 1.8.77-2
 
-%description -n %{libname}-devel
+%description -n %{develname}
 QDBM development package: static libraries, header files, and the like.
 
 
@@ -77,13 +79,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %{libname}
 %defattr(-,root,root)
-%doc COPYING
-%{_libdir}/*.so*
+%{_libdir}/*.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
+%{_libdir}/*.so
 %{_includedir}/*.h
 %{_libdir}/libqdbm.a
 %{_libdir}/pkgconfig/qdbm.pc
-
-
