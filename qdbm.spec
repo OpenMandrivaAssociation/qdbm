@@ -91,3 +91,49 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*.h
 %{_libdir}/libqdbm.a
 %{_libdir}/pkgconfig/qdbm.pc
+
+
+%changelog
+* Mon Sep 07 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.8.77-4mdv2010.0
++ Revision: 432753
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.8.77-3mdv2009.0
++ Revision: 269051
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Sat May 03 2008 Funda Wang <fundawang@mandriva.org> 1.8.77-2mdv2009.0
++ Revision: 200594
+- new devel package policy
+- move .so into devel package
+
+* Mon Apr 21 2008 Funda Wang <fundawang@mandriva.org> 1.8.77-1mdv2009.0
++ Revision: 196307
+- update to new version 1.8.77
+
+* Mon Feb 18 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.8.75-2mdv2008.1
++ Revision: 171071
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Apr 24 2007 Thierry Vignaud <tvignaud@mandriva.com> 1.8.75-1mdv2008.0
++ Revision: 17833
+- new release
+
+
+* Thu Dec 28 2006 Lenny Cartier <lenny@mandriva.com> 1.8.74-1mdv2007.0
++ Revision: 102301
+- Update to 1.8.74
+
+* Fri Oct 20 2006 Lenny Cartier <lenny@mandriva.com> 1.8.71-1mdv2007.1
++ Revision: 71264
+- Update to 1.8.71
+- Import qdbm
+
