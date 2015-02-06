@@ -1,5 +1,5 @@
 %define version   1.8.77
-%define release   %mkrel 4
+%define release   5
 
 %define major 14
 %define libname %mklibname %{name} %{major}
