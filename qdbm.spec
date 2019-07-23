@@ -8,7 +8,7 @@
 Name:		qdbm
 Summary:	Quick Database Manager
 Version:	%{version}
-Release:	%{release}
+Release:	1
 Group:		Databases
 License:	LGPL
 URL:		http://qdbm.sourceforge.net/
