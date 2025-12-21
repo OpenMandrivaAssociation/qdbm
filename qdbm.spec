@@ -16,6 +16,11 @@ Source0:	%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:	zlib
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 QDBM is an embeded database library compatible 
 with GDBM and NDBM.
